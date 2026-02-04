@@ -13,18 +13,26 @@ h1 {
     font-size: 35px;
 }
 
+h2 {
+    font-size: 35px;
+}
+
 h3 {
     font-size: 21px;
 }
 
-hero {
+h4 {
+    font-size: 18px;
+}
+
+.hero {
     color: white;
     background-image: url("./assets/background.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 5% 2%;
     line-height: 2.5;
     display: flex;
@@ -32,15 +40,17 @@ hero {
     align-items: start;
     justify-content: end;
 }
-hero h1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+
+.hero-content {
+    margin-bottom: 2rem;
 }
-hero p {
+
+.hero-description {
     max-width: 500px;
+    margin: 1rem 0;
 }
-button {
+
+.hero-button {
     max-width: 500px;
     padding: 16px 32px;
     border: none;
@@ -48,13 +58,11 @@ button {
     color: white;
     font-size: 20px;
     background-color: #296aff;
-
-
     transition: 0.3s ease;
     cursor: pointer;
 }
 
-button:hover {
+.hero-button:hover {
     transform: scale(1.05);
     background-color: white;
     color: black;
@@ -66,12 +74,18 @@ button:hover {
     height: 13%;
 }
 
-.date {
+.hero-date {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 15px 0;
 }
+
+.hero-date span {
+    margin-left: 10px;
+}
+
+
 
 .about {
     width: 100%;
@@ -82,14 +96,9 @@ button:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-
-
-
     opacity: 0;
     transform: translateX(-100px);
     transition: all 0.4s ease-out;
-
-
 }
 
 .about.visible {
@@ -97,6 +106,9 @@ button:hover {
     transform: translateX(0);
 }
 
+.about-description {
+    margin-bottom: 2rem;
+}
 
 .categories {
     padding: 2% 0;
@@ -129,7 +141,7 @@ button:hover {
     padding: 5px;
 }
 
-.conds {
+.conditions {
     padding: 2% 0;
     width: 100%;
     display: flex;
@@ -138,7 +150,7 @@ button:hover {
     justify-content: space-around;
 }
 
-.cond {
+.condition {
     border-radius: 25px;
     width: 30%;
     padding: 2%;
@@ -148,15 +160,19 @@ button:hover {
     align-items: center;
 }
 
-.congrats {
+.prizes-section {
     width: 100%;
     background-color: #e4e4e4;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
     padding: 30px 0;
+}
+
+.prize-amount {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 1rem 0;
 }
 
 .prizes {
@@ -168,14 +184,9 @@ button:hover {
     align-items: center;
     justify-content: space-around;
     text-align: center;
-
-
-
     opacity: 0;
     transform: translateY(-100px);
     transition: all 0.4s ease-out;
-
-
 }
 
 .prizes.visible {
@@ -183,12 +194,11 @@ button:hover {
     transform: translateY(0);
 }
 
-
 .prize {
     border: 1px solid #296aff;
     border-radius: 25px;
     width: 20%;
-    height: 300px;
+    min-height: 300px;
     padding: 2%;
     line-height: 3;
     transition: 0.3s ease;
@@ -225,8 +235,7 @@ button:hover {
     padding: 5px;
 }
 
-
-.form {
+.form-section {
     border: 1px solid #296aff;
     border-radius: 15px;
     background-color: #a2bcff;
@@ -240,7 +249,11 @@ button:hover {
     text-align: center;
 }
 
-.inputForm {
+.form-description {
+    margin-bottom: 1.5rem;
+}
+
+.input-form {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -248,15 +261,16 @@ button:hover {
     justify-content: space-around;
 }
 
-.inputText {
+.input-text {
     border: 1px solid #296aff;
     outline: none;
     border-radius: 15px;
-    width: 30%;
+    width: 50%;
     padding: 2%;
+    font-size: 16px;
 }
 
-footer {
+.site-footer {
     padding: 2% 0;
     background-color: #2e2e2e;
     color: white;
@@ -265,24 +279,74 @@ footer {
     justify-content: space-around;
 }
 
-.footCollumn {
+.footer-column {
     line-height: 2;
     width: 20%;
 }
 
-.socialIcon {
+.footer-column address {
+    font-style: normal;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
     margin: 5px;
     padding: 7px;
     border-radius: 30%;
     background-color: #818181;
+    cursor: pointer;
 }
 
-@media screen and (max-width: 800px) {
+.social-icon:hover {
+    background-color: #296aff;
+}
 
+
+.success-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.success-icon {
+    background-color: white;
+    color: #4CAF50;
+    border-radius: 50%;
+    padding: 4px;
+    flex-shrink: 0;
+}
+
+.success-message span {
+    font-size: 16px;
+    opacity: 1;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width: 800px) {
     .categories {
         flex-direction: column;
     }
-
 
     .category {
         width: 100%;
@@ -290,11 +354,11 @@ footer {
         padding: 10%;
     }
 
-    .conds {
+    .conditions {
         flex-direction: column;
     }
 
-    .cond {
+    .condition {
         width: 100%;
         margin: 7px;
         align-items: start;
@@ -304,28 +368,44 @@ footer {
     .prizes {
         flex-direction: column;
     }
+
     .prize {
         width: 100%;
         margin: 7px;
+        min-height: 250px;
     }
 
-    .form {
+    .form-section {
         margin: 5% 5%;
     }
-    .inputForm {
+
+    .input-form {
         flex-direction: column;
     }
-    .inputText {
+
+    .input-text {
         width: 80%;
         margin: 7%;
         padding: 5%;
     }
 
-    footer {
+    .site-footer {
         flex-direction: column;
+        padding: 5%;
     }
-    .footCollumn {
+
+    .footer-column {
         margin: 4% 0;
         width: 100%;
+    }
+
+    .success-message {
+        max-width: 80%;
+        padding: 10px 16px;
+        margin-top: 15px;
+    }
+
+    .success-message span {
+        font-size: 14px;
     }
 }
