@@ -1,6 +1,7 @@
 import './App.css'
 import { IconCode, IconPalette, IconCalendarEvent, IconSchool, IconDeviceMobile, IconDeviceLaptop, IconLaurelWreath1, IconLaurelWreath2, IconLaurelWreath3, IconBrandTelegram, IconBrandVk, IconCheck } from '@tabler/icons-react'
 import { useEffect, useRef, useState } from 'react'
+import vkLogo from './assets/vkLogo.jpg'
 
 function App() {
     const aboutRef = useRef(null)
@@ -85,9 +86,6 @@ function App() {
 
     useEffect(() => {
         if (showSuccess && successMessageRef.current) {
-            successMessageRef.current.style.opacity = '0';
-            successMessageRef.current.style.transform = 'translateY(-20px)';
-
             setTimeout(() => {
                 successMessageRef.current.style.transition = 'all 0.5s ease-out';
                 successMessageRef.current.style.opacity = '1';
@@ -99,6 +97,7 @@ function App() {
     return (
         <>
             <header className="hero">
+                <img className="hero-logo" src={vkLogo} alt="VK" />
                 <div className="hero-content">
                     <h1>Чемпионат VK-Tech</h1>
                     <p className="hero-description">Конкурс для студентов колледжей и вузов по направлениям разработки и дизайна</p>
@@ -107,7 +106,7 @@ function App() {
                         <span>15 марта - 19 апреля 2026</span>
                     </p>
                 </div>
-                <button onClick={handleScroll} className="hero-button">Регистрация</button>
+                <button onClick={handleScroll} className="hero-button"><h4>Регистрация</h4></button>
             </header>
 
             <main>
@@ -182,7 +181,7 @@ function App() {
                             onChange={(e) => setEmail(e.currentTarget.value)}
                             aria-label="Email для подписки на рассылку"
                         />
-                        <button onClick={() => getEmail(email)} className="hero-button">Подписаться</button>
+                        <button onClick={() => getEmail(email)} className="hero-button"><h4>Подписаться</h4></button>
                     </div>
 
                     {showSuccess && (

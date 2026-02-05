@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body {
+    font-family: Ubuntu;
+}
+
 p {
     font-size: 16px;
     opacity: 0.75;
@@ -39,6 +43,12 @@ h4 {
     flex-direction: column;
     align-items: start;
     justify-content: end;
+}
+
+.hero-logo {
+    border-radius: 15px;
+    height: 170px;
+    width: 170px;
 }
 
 .hero-content {
