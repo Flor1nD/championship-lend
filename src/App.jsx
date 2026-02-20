@@ -202,29 +202,35 @@ function App() {
                 </section>
             </main>
 
-            <footer className="site-footer">
-                <div className="footer-column">
-                    <h3>Чемпионат VK-Tech</h3>
-                    <p>Технологический чемпионат для студентов по направлениям разработки и дизайна</p>
-                </div>
-                <div className="footer-column">
-                    <h3>Контакты</h3>
-                    <address>
-                        <p>Телефон: <a href="tel:88005553535">8 (800) 555-35-35</a></p>
-                        <p>Email: <a href="mailto:championship@vk.com">championship@vk.com</a></p>
-                        <p>Адрес: Ленинградский проспект, д. 39, стр. 79</p>
-                    </address>
-                </div>
-                <div className="footer-column">
-                    <h3>Социальные сети</h3>
-                    <div className="social-icons">
-                        <a href="https://t.me/vktech" aria-label="Telegram">
-                            <IconBrandTelegram className="social-icon" stroke={1} width={50} height={50} />
-                        </a>
-                        <a href="https://vk.com/vktech" aria-label="ВКонтакте">
-                            <IconBrandVk className="social-icon" stroke={1} width={50} height={50} />
-                        </a>
+            <footer>
+                <div className="site-footer">
+                    <div className="footer-column">
+                        <h3>Чемпионат VK-Tech</h3>
+                        <p>Технологический чемпионат для студентов по направлениям разработки и дизайна</p>
                     </div>
+                    <div className="footer-column">
+                        <h3>Контакты</h3>
+                        <address>
+                            <p>Телефон: 8 (800) 555-35-35</p>
+                            <p>Email: championship@vk.com</p>
+                            <p>Адрес: Ленинградский проспект, д. 39, стр. 79</p>
+                        </address>
+                    </div>
+                    <div className="footer-column">
+                        <h3>Социальные сети</h3>
+                        <div className="social-icons">
+                            <a href="#" aria-label="Telegram">
+                                <IconBrandTelegram className="social-icon" stroke={1} width={50} height={50} />
+                            </a>
+                            <a href="#" aria-label="ВКонтакте">
+                                <IconBrandVk className="social-icon" stroke={1} width={50} height={50} />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <div className="copyright">
+                    <p>© 2026 VK Company. Все права защищены.</p>
                 </div>
             </footer>
         </>

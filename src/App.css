@@ -280,10 +280,14 @@ h4 {
     font-size: 16px;
 }
 
-.site-footer {
+footer {
     padding: 2% 0;
     background-color: #2e2e2e;
     color: white;
+}
+
+.site-footer {
+    margin-bottom: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -322,6 +326,11 @@ h4 {
 
 .social-icon:hover {
     background-color: #296aff;
+}
+
+.copyright {
+    text-align: center;
+    margin: 30px 0;
 }
 
 
